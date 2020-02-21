@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>start learning</title>
+   <style>
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap');
+        body
+        {
+           margin:0;
+           padding:0;
+           font-family: 'Josefin Sans', sans-serif;
+           background-image:url('https://medatech.com/wp-content/uploads/2017/11/Website-Background.png');
+        }
+        .card
+        {
+           position:absolute;
+           top:50%;
+           left:50%;
+           transform:translate(-50%,-50%);
+           width:300px;
+           height:400px;
+           transform-style:preserve-3d;
+           perspective:600px;
+           transition:0.5s;
+        }
+        .card .front
+        {
+           position:absolute;
+           top:0;
+           left:0;
+           width:100%;
+           height:100%;
+           background:#000;
+           backface-visibility:hidden;
+           transform:rotateX(0deg);
+           transition:0.5s; 
+        }
+        .card:hover .front
+        {
+            transform:rotateX(-180deg);
+            cursor:pointer;
+        }
+
+        .card .back
+        {
+           position:absolute;
+           top:0;
+           left:0;
+           width:100%;
+           height:100%;
+           background:#000;
+           backface-visibility:hidden;
+           transform:rotateX(180deg);
+           transition:0.5s; 
+        }
+        .card:hover .back
+        {
+            transform:rotateX(0deg);
+            cursor:pointer;
+        }
+        .card .back .details
+        {
+           position:absolute;
+           top:50%;
+           transform:translateY(-50%);
+           left:0;
+           width:100%;
+           text-align:center;
+           padding:20px;
+           box-sizing:border-box;
+        }
+        .card .back .details h2
+        {
+           margin:0;
+           padding:0;
+           width:100%;
+           font-size:24px;
+           color:#fff;
+        }
+       .card .back .details span
+        {
+           font-size:16px;
+           color:#a7a7a7;
+        }
+       .card .back .details a
+        {
+           text-decoration:none;
+           border:none;
+           border-radius:40px;
+           color:#00b894;
+           background:steelblue;
+           padding:12px;
+           text-shadow:1px 1px 0.5px white;
+       }
+       .card .back .details a:hover{
+            background:yellow;
+            border:inset grey;
+       }
+   </style>
+</head>
+<body>
+   <div class="card">
+       <div class="front"><img src="img.jpg">
+       </div>
+       <div class="back">
+           <div class="details">
+               <h2>Learn HTML<br><span>create your own website<br><br>Hypertext Markup Language<br>is the standard markup language for documents designed to be displayed in a web browser.<br>
+                 It can be assisted by technologies such as Cascading Style Sheet(CSS) and scripting languages such as JavaScript(JS).</span></h2><br><br>
+               <a href="HTML.html">more</a>
+           </div>
+       </div>
+</body>
+</html>
